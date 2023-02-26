@@ -15,11 +15,6 @@ dotenv.config()
 const app=express()
 app.use(cors())
 app.use(express.json())
-
-app.get("/",(req,res)=>{
-    res.send({message:"Welcome To Shoppeo Server"})
-})
-
 app.use("/api/auth",auth)
 app.use("/api/user",userRoute)
 app.use("/api/product",ProductRoute)
